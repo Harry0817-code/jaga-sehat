@@ -1,9 +1,3 @@
-export function calculateBMI(weight, height) {
-  const heightInMeters = height / 100;
-  const bmi = weight / (heightInMeters * heightInMeters);
-  return parseFloat(bmi.toFixed(1));
-}
-
 export function getBMICategory(bmi) {
   if (bmi < 18.5) {
     return {

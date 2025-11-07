@@ -104,6 +104,25 @@ async function addDoctor({ nama, email = 'test@gmail.com', spesialis, noWa, alam
   return { error: false };
 }
 
+async function addPromptGenAi({ gender, age, weight, height, valueBmi }) {
+  const response = await fetch(`${BASE_URL}/api/analyze`, {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json',
+    },
+    body: JSON.stringify({ gender, age, weight, height, valueBmi })
+  });
+
+  const responseJson = await response.json();
+
+  if (responseJson.status !== 'success') {
+    alert(response.message);
+    return { error: true, data: null };
+  }
+
+  return {error: false, data: responseJson.data};
+}
+
 async function editDoctor(id, { nama, email = 'test@gmail.com', spesialis, noWa, alamat }) {
   const response = await fetch(`${BASE_URL}/doctor/${id}`, {
     method: 'PUT',
@@ -186,5 +205,6 @@ export {
   getHistoryDoctors,
   addDoctor,
   editDoctor,
-  deleteDoctor
+  deleteDoctor,
+  addPromptGenAi
 };

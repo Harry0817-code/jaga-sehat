@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { Heart } from "lucide-react";
-import { Routes, Route, useNavigate, Navigate, Link } from "react-router-dom";
+import { Routes, Route, useNavigate, Link } from "react-router-dom";
 import { getUserLogged, login, putAccessToken } from "./utils/network-data";
 import LoginPage from "./pages/LoginPage";
 import RegisterPage from "./pages/RegisterPage";
@@ -9,7 +9,7 @@ import GetStartedPage from "./pages/GetStartedPage";
 import Navigations from "./components/Navigations";
 import ChatDoctorsPage from "./pages/ChatDoctorsPage";
 import DetailDoctorPage from "./pages/DetailDoctorPage";
-import BMICalculator from './pages/cek-ideal-badan/BMICalculator';
+import BMICalculator from './pages/check-ideal-with-ai/BMICalculator';
 import AdminDashboard from './pages/Admin/Admin';
 
 function App() {
