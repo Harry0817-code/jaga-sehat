@@ -33,7 +33,7 @@ function InputFormBMI({ onSubmit, repeatSuggest }) {
           </div>
         </div>
 
-        {/* Untuk kolom Tinggi */}
+        {/* Untuk kolom Tinggi Badan */}
         <div className="form-group">
           <label htmlFor="height">INPUT HEIGHT</label>
           <div className="input-with-arrows">
@@ -49,7 +49,7 @@ function InputFormBMI({ onSubmit, repeatSuggest }) {
           </div>
         </div>
 
-        {/* Untuk kolom Berat */}
+        {/* Untuk kolom Berat Badan */}
         <div className="form-group">
           <label htmlFor="weight">INPUT WEIGHT</label>
           <div className="input-with-arrows">
