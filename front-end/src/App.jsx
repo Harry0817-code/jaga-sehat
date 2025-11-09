@@ -36,6 +36,9 @@ function App() {
       setIsLoading(false);
       navigate("/", { replace: true });
     }
+    else {
+      return setIsLoading(false);
+    }
   }
 
   async function onClickLogout() {
